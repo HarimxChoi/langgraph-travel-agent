@@ -1,0 +1,168 @@
+# ============================================================================
+# Multi-Agent Travel Booking System - Git Ignore Rules
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# CRITICAL - Secrets & API Keys
+# ----------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+credentials/
+
+# ----------------------------------------------------------------------------
+# Python
+# ----------------------------------------------------------------------------
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# mkdocs
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ----------------------------------------------------------------------------
+# IDEs & Editors
+# ----------------------------------------------------------------------------
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ----------------------------------------------------------------------------
+# OS Files
+# ----------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ----------------------------------------------------------------------------
+# Logs & Databases
+# ----------------------------------------------------------------------------
+*.log
+*.sql
+*.sqlite
+*.db
+
+# ----------------------------------------------------------------------------
+# Project Specific
+# ----------------------------------------------------------------------------
+# Checkpointer data
+checkpoints/
+*.checkpoint
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Test outputs
+test-output/
