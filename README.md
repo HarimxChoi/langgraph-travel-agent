@@ -2,11 +2,11 @@
 
 Production-ready LangGraph implementation for intelligent travel planning with multi-API integration, async execution, and human-in-the-loop workflows.
 
-[Python](https://img.shields.io/badge/python-3.9%2B-blue)
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 
-[License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-[LangGraph](https://img.shields.io/badge/LangGraph-0.2%2B-orange)
+![LangGraph](https://img.shields.io/badge/LangGraph-0.2%2B-orange)
 
 ## 🚀 Features
 
@@ -37,12 +37,12 @@ Production-ready LangGraph implementation for intelligent travel planning with m
 
 ## 📋 Table of Contents
 
-- [Quick Start]
-- [Architecture]
-- [API Setup]
-- [Usage Examples]
-- [Customization]
-- [Deployment]
+- [Quick Start](#quick-start)
+- [Architecture](#architecture)
+- [API Setup](#api-setup)
+- [Usage Examples](#usage-examples)
+- [Customization](#customization)
+- [Deployment](#deployment)
 
 ---
 
