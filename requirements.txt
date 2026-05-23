@@ -1,0 +1,54 @@
+# ============================================================================
+# Multi-Agent Travel Booking System - Python Dependencies
+# ============================================================================
+# Install all dependencies: pip install -r requirements.txt
+# For production: pip install -r requirements.txt --break-system-packages
+
+# ----------------------------------------------------------------------------
+# Core LangGraph & LangChain Stack
+# ----------------------------------------------------------------------------
+langgraph>=0.2.0
+langchain-core>=0.3.0
+langchain-google-genai>=2.0.0
+
+# ----------------------------------------------------------------------------
+# API Clients
+# ----------------------------------------------------------------------------
+amadeus>=8.1.0           # Amadeus travel API
+twilio>=9.0.0           # SMS notifications (optional)
+httpx>=0.27.0           # Async HTTP client for API calls
+
+# ----------------------------------------------------------------------------
+# Data Validation & Parsing
+# ----------------------------------------------------------------------------
+pydantic>=2.0.0         # Data models and validation
+
+# ----------------------------------------------------------------------------
+# Environment & Configuration
+# ----------------------------------------------------------------------------
+python-dotenv>=1.0.0    # Load environment variables from .env
+
+# ----------------------------------------------------------------------------
+# Optional - Production Deployment
+# ----------------------------------------------------------------------------
+# Uncomment these if deploying with FastAPI or other frameworks:
+# fastapi>=0.110.0       # Web framework
+# uvicorn[standard]>=0.29.0  # ASGI server
+# gunicorn>=21.2.0       # Production WSGI server
+
+# ----------------------------------------------------------------------------
+# Optional - Development Tools
+# ----------------------------------------------------------------------------
+# Uncomment for development:
+# pytest>=8.0.0          # Testing framework
+# black>=24.0.0          # Code formatting
+# ruff>=0.3.0            # Fast linting
+# mypy>=1.9.0            # Type checking
+
+# ----------------------------------------------------------------------------
+# Version Notes
+# ----------------------------------------------------------------------------
+# Minimum Python version: 3.9
+# Recommended Python version: 3.11+
+# All versions use '>=' to allow for compatible updates
+# Pin versions in production if stability is critical

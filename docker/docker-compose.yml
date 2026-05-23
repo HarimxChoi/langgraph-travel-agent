@@ -1,0 +1,18 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - AMADEUS_API_KEY=${AMADEUS_API_KEY}
+      - AMADEUS_API_SECRET=${AMADEUS_API_SECRET}
+      - HOTELBEDS_API_KEY=${HOTELBEDS_API_KEY}
+      - HOTELBEDS_API_SECRET=${HOTELBEDS_API_SECRET}
+      - TWILIO_ACCOUNT_SID=${TWILIO_ACCOUNT_SID}
+      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
+      - TWILIO_SENDER_PHONE=${TWILIO_SENDER_PHONE}
+      - HUBSPOT_API_KEY=${HUBSPOT_API_KEY}
+    restart: unless-stopped
