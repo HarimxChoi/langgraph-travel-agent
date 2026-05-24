@@ -2,7 +2,7 @@
 
 [English](./README.md) | 한국어
 
-여행 플래닝용 production-ready LangGraph multi-agent 시스템. Amadeus, Hotelbeds, Twilio, HubSpot에 걸친 비동기 병렬 tool orchestration.
+여행 플래닝 multi-agent 시스템. LangGraph로 orchestration하고, Amadeus / Hotelbeds / Twilio / HubSpot을 비동기 병렬로 호출함.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -11,7 +11,7 @@
 
 ## What it does
 
-- 자연어 여행 요청 -> 구조화된 `TravelPlan`
+- 자연어 여행 요청 -> `TravelPlan` 변환
 - 항공편 (Amadeus), 호텔 (Amadeus + Hotelbeds), 액티비티 (Amadeus) 병렬 검색
 - LLM 기반 패키지 생성 (Budget / Balanced / Premium)
 - HITL (human-in-the-loop): 대화 중간에 고객 정보 폼 삽입
@@ -91,7 +91,7 @@ curl -X POST http://localhost:8000/chat \
   -d '{"message": "4-day trip from Seoul to Paris, $3000 budget", "thread_id": "demo-001"}'
 ```
 
-이후 `/chat/status/{task_id}`를 status가 `completed`가 될 때까지 폴링.
+이후 `/chat/status/{task_id}`를 status가 `completed` 될 때까지 폴링함.
 
 ## Integration matrix
 
@@ -105,10 +105,10 @@ curl -X POST http://localhost:8000/chat \
 
 ## Notes
 
-- 외부 API 호출 전부 `asyncio.gather`로 병렬 (예: 항공편 + 호텔 + 액티비티 한 라운드트립).
-- Conformal logic은 호텔에 Amadeus city code, 항공편에 IATA code 사용. LLM이 자동 변환.
-- 고객 정보 폼은 첫 턴에서 트리거 (state: `collecting_info`). 이후 턴은 저장된 정보를 주입.
-- HubSpot 대신 다른 CRM을 쓰려면 `backend/tools/crm.py`의 payload / endpoint만 교체.
+- 외부 API 호출은 전부 `asyncio.gather`로 묶음. 항공편, 호텔, 액티비티가 한 번에 나감.
+- 호텔은 Amadeus city code, 항공편은 IATA code 씀. LLM이 변환함.
+- 고객 정보 폼은 첫 턴에서만 뜸 (state: `collecting_info`). 이후 턴은 저장된 값 재사용.
+- HubSpot 말고 다른 CRM 쓰려면 `backend/tools/crm.py`의 payload랑 endpoint만 바꾸면 됨.
 
 ## License
 
